@@ -26,11 +26,9 @@ public final class SeededShootoutRandom implements ShootoutRandom {
 
     @Override
     public int nextDamage() {
-        return CowboyCircle.MINIMUM_DAMAGE
-                + random.nextInt(
-                CowboyCircle.MAXIMUM_DAMAGE
-                        - CowboyCircle.MINIMUM_DAMAGE
-                        + 1
+        return random.nextInt(
+                CowboyCircle.MINIMUM_DAMAGE,
+                CowboyCircle.MAXIMUM_DAMAGE + 1
         );
     }
 }
