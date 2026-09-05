@@ -2,6 +2,8 @@ package io.github.madniabdulwahab.shootout.simulation;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.madniabdulwahab.shootout.domain.ShootoutRules;
+
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -37,8 +39,8 @@ class SeededShootoutRandomTest {
 
             assertTrue(startingCowboy >= 0);
             assertTrue(startingCowboy < 50);
-            assertTrue(damage >= CowboyCircle.MINIMUM_DAMAGE);
-            assertTrue(damage <= CowboyCircle.MAXIMUM_DAMAGE);
+            assertTrue(damage >= ShootoutRules.MINIMUM_DAMAGE);
+            assertTrue(damage <= ShootoutRules.MAXIMUM_DAMAGE);
         }
     }
 

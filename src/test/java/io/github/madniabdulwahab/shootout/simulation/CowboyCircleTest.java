@@ -2,6 +2,7 @@ package io.github.madniabdulwahab.shootout.simulation;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.madniabdulwahab.shootout.domain.ShootoutRules;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -32,7 +33,7 @@ class CowboyCircleTest {
 
         for (int cowboyId = 0; cowboyId < 4; cowboyId++) {
             assertEquals(
-                    CowboyCircle.INITIAL_HEALTH_POINTS,
+                    ShootoutRules.INITIAL_HEALTH_POINTS,
                     circle.healthPointsOf(cowboyId)
             );
             assertTrue(circle.contains(cowboyId));

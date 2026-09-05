@@ -3,6 +3,10 @@ package io.github.madniabdulwahab.shootout.simulation;
 import java.util.Arrays;
 import java.util.Objects;
 
+import static io.github.madniabdulwahab.shootout.domain.ShootoutRules.INITIAL_HEALTH_POINTS;
+import static io.github.madniabdulwahab.shootout.domain.ShootoutRules.MAXIMUM_DAMAGE;
+import static io.github.madniabdulwahab.shootout.domain.ShootoutRules.MINIMUM_DAMAGE;
+
 /**
  * Stores the health and neighbor relationships of the cowboys who are
  * currently part of the shootout.
@@ -12,10 +16,6 @@ import java.util.Objects;
  * removal.</p>
  */
 final class CowboyCircle {
-
-    static final int INITIAL_HEALTH_POINTS = 10;
-    static final int MINIMUM_DAMAGE = 1;
-    static final int MAXIMUM_DAMAGE = 5;
 
     private final int[] healthPoints;
     private final int[] leftNeighbors;

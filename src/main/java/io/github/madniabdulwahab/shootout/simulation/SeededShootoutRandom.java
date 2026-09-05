@@ -2,6 +2,8 @@ package io.github.madniabdulwahab.shootout.simulation;
 
 import java.util.Random;
 
+import io.github.madniabdulwahab.shootout.domain.ShootoutRules;
+
 /**
  * Reproducible pseudorandom values for a shootout.
  */
@@ -27,8 +29,8 @@ public final class SeededShootoutRandom implements ShootoutRandom {
     @Override
     public int nextDamage() {
         return random.nextInt(
-                CowboyCircle.MINIMUM_DAMAGE,
-                CowboyCircle.MAXIMUM_DAMAGE + 1
+                ShootoutRules.MINIMUM_DAMAGE,
+                ShootoutRules.MAXIMUM_DAMAGE + 1
         );
     }
 }

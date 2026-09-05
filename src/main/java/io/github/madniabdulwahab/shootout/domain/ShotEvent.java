@@ -2,6 +2,9 @@ package io.github.madniabdulwahab.shootout.domain;
 
 import java.util.Objects;
 
+import static io.github.madniabdulwahab.shootout.domain.ShootoutRules.MAXIMUM_DAMAGE;
+import static io.github.madniabdulwahab.shootout.domain.ShootoutRules.MINIMUM_DAMAGE;
+
 /**
  * An immutable description of one shot in the shootout.
  *
@@ -18,9 +21,6 @@ public record ShotEvent(
         int targetHealthPointsAfter,
         boolean targetKilled
 ) {
-
-    private static final int MINIMUM_DAMAGE = 1;
-    private static final int MAXIMUM_DAMAGE = 5;
 
     public ShotEvent {
         if (shotNumber <= 0) {
