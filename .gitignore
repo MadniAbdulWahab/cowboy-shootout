@@ -13,6 +13,7 @@ target/
 *.iws
 *.iml
 *.ipr
+/shootout-protocol.json
 
 ### Eclipse ###
 .apt_generated
