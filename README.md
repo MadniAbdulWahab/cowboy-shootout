@@ -12,7 +12,7 @@ For IntelliJ IDEA, open the project directory or `pom.xml` as a Maven project an
 
 ## Build and run
 
-On Windows PowerShell, with `JAVA_HOME` configured::
+On Windows PowerShell, with `JAVA_HOME` configured:
 
 ```powershell
 .\mvnw.cmd clean package
