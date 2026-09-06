@@ -1,8 +1,8 @@
 package io.github.madniabdulwahab.shootout.simulation;
 
+import io.github.madniabdulwahab.shootout.domain.ShootoutRules;
 import org.junit.jupiter.api.Test;
 
-import io.github.madniabdulwahab.shootout.domain.ShootoutRules;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

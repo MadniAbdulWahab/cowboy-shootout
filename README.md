@@ -33,9 +33,9 @@ The program prints every shot and the final winner. It creates `shootout-protoco
 
 I represent the circle with primitive arrays for health, left neighbors, and right neighbors. This gives constant-time neighbor lookup and removal while avoiding array shifting and per-node object overhead.
 
-The simulation performs one shot at a time because each result determines the next shooter. Randomness is injected through `ShootoutRandom`, which lets the tests use scripted values. A generated seed is printed and stored in the protocol so the underlying simulation can be reproduced during testing or analysis.
+The simulation performs one shot at a time because each result determines the next shooter. Randomness is injected through `ShootoutRandom`, which lets the tests use scripted values. A generated seed is printed and stored in the protocol. Using the same cowboy count and seed with `SeededShootoutRandom` reproduces the random sequence in tests or analysis.
 
-Jackson streams each event directly to the JSON file, so the complete history is not held in memory. After the completed file is closed, it is read as a stream to calculate SHA-256. Initialization, simulation time, and output size are `O(n)`; neighbor lookup, damage, and removal are `O(1)`.
+Jackson streams each event directly to the JSON file, so the complete history is not held in memory. After the protocol file is closed, it is read as a stream to calculate SHA-256. Since every cowboy starts with 10 HP and each shot removes at least 1 HP, a game has at most `10n - 1` shots. Therefore simulation time and protocol size are `O(n)`; neighbor lookup, damage, and removal are `O(1)`.
 
 ## Protocol
 
@@ -55,7 +55,7 @@ Before the starter is selected, the game is fair between named cowboys. The star
 
 The relative positions are not equally favorable once the starter is known. Since every cowboy starts with 10 HP, the first shot always goes right, which disadvantages the immediate right neighbor.
 
-I checked this with 200,000 reproducible simulations per circle size using experiment seed `20260905`:
+To check the positional effect, I ran the actual simulator from JShell 200,000 times per circle size, using experiment seed `20260905`.:
 
 | Cowboys | Most likely relative position | Estimated win rate |
 |---:|---|---:|

@@ -5,7 +5,9 @@ import io.github.madniabdulwahab.shootout.domain.ShootoutResult;
 import io.github.madniabdulwahab.shootout.domain.ShotEvent;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ShootoutSimulatorTest {
 

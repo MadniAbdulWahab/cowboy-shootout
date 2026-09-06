@@ -1,10 +1,10 @@
 package io.github.madniabdulwahab.shootout.simulation;
 
+import java.util.Objects;
+
 import io.github.madniabdulwahab.shootout.domain.Direction;
 import io.github.madniabdulwahab.shootout.domain.ShootoutResult;
 import io.github.madniabdulwahab.shootout.domain.ShotEvent;
-
-import java.util.Objects;
 
 /**
  * Executes the shootout rules one shot at a time.
