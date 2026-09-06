@@ -55,7 +55,7 @@ Before the starter is selected, the game is fair between named cowboys. The star
 
 The relative positions are not equally favorable once the starter is known. Since every cowboy starts with 10 HP, the first shot always goes right, which disadvantages the immediate right neighbor.
 
-To check the positional effect, I ran the actual simulator from JShell 200,000 times per circle size, using experiment seed `20260905`.:
+To check the positional effect, I ran the actual simulator from JShell 200,000 times per circle size, using experiment seed `20260905`:
 
 | Cowboys | Most likely relative position | Estimated win rate |
 |---:|---|---:|
