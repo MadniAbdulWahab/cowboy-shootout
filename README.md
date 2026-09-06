@@ -5,13 +5,14 @@ A Java 21 command-line simulation of the Wild West shootout described in the tes
 ## Requirements
 
 - JDK 21
+- On Windows, `JAVA_HOME` must point to the JDK 21 installation when using `mvnw.cmd`.
 - No separate Maven installation is required; the Maven Wrapper is included.
 
 For IntelliJ IDEA, open the project directory or `pom.xml` as a Maven project and select JDK 21 as the project SDK.
 
 ## Build and run
 
-On Windows PowerShell:
+On Windows PowerShell, with `JAVA_HOME` configured::
 
 ```powershell
 .\mvnw.cmd clean package
