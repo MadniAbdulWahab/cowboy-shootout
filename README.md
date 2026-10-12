@@ -1,6 +1,6 @@
 # Cowboy Shootout
 
-A Java 21 command-line simulation of the Wild West shootout described in the test task. The program accepts the number of cowboys, runs the game until one remains, writes every shot to a UTF-8 JSON protocol, and prints its SHA-256 checksum.
+A Java 21 command-line simulation of the Wild West shootout. The program accepts the number of cowboys, runs the game until one remains, writes every shot to a UTF-8 JSON protocol, and prints its SHA-256 checksum.
 
 ## Requirements
 
